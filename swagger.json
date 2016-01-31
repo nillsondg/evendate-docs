@@ -8,7 +8,7 @@
       "email": "api@evendate.ru"
     }
   },
-  "host": "test.evendate.org",
+  "host": "evendate.ru",
   "basePath": "/api/v1",
   "tags": [
     {
