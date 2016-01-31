@@ -84,6 +84,29 @@
             "required": false,
             "type": "string",
             "enum": ["true", "false"]
+          },
+          {
+            "name": "length",
+            "in": "query",
+            "description": "Items count",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "Items count",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Additional fields and sub-entities",
+            "required": false,
+            "type": "string"
           }
         ],
         "responses": {
@@ -118,6 +141,13 @@
             "required": true,
             "type": "integer",
             "format": "int64"
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Additional fields and sub-entities",
+            "required": false,
+            "type": "string"
           }
         ],
         "responses": {
@@ -170,7 +200,31 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "length",
+            "in": "query",
+            "description": "Items count",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "Items count",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Additional fields and sub-entities",
+            "required": false,
+            "type": "string"
+          }
+        ],
         "responses": {
           "200": {
             "description": "successful operation",
@@ -203,6 +257,13 @@
             "required": true,
             "type": "integer",
             "format": "int64"
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Additional fields and sub-entities",
+            "required": false,
+            "type": "string"
           }
         ],
         "responses": {
@@ -237,6 +298,29 @@
             "name": "event_id",
             "in": "query",
             "description": "Event ID to search for",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "length",
+            "in": "query",
+            "description": "Items count",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "Items count",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Additional fields and sub-entities",
             "required": false,
             "type": "string"
           }
@@ -395,6 +479,29 @@
               "true",
               "false"
             ]
+          },
+          {
+            "name": "length",
+            "in": "query",
+            "description": "Items count",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "Items count",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Additional fields and sub-entities",
+            "required": false,
+            "type": "string"
           }
         ],
         "responses": {
@@ -490,6 +597,29 @@
               "true",
               "false"
             ]
+          },
+          {
+            "name": "length",
+            "in": "query",
+            "description": "Items count",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "Items count",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Additional fields and sub-entities",
+            "required": false,
+            "type": "string"
           }
         ],
         "responses": {
@@ -563,6 +693,29 @@
             "required": false,
             "type": "integer",
             "format": "int64"
+          },
+          {
+            "name": "length",
+            "in": "query",
+            "description": "Items count",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "Items count",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Additional fields and sub-entities",
+            "required": false,
+            "type": "string"
           }
         ],
         "responses": {
@@ -655,6 +808,29 @@
               "true",
               "false"
             ]
+          },
+          {
+            "name": "length",
+            "in": "query",
+            "description": "Items count",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "Items count",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Additional fields and sub-entities",
+            "required": false,
+            "type": "string"
           }
         ],
         "responses": {
@@ -715,6 +891,13 @@
             "required": true,
             "type": "integer",
             "format": "int64"
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Additional fields and sub-entities",
+            "required": false,
+            "type": "string"
           }
         ],
         "responses": {
@@ -820,6 +1003,29 @@
             "required": true,
             "type": "integer",
             "format": "int64"
+          },
+          {
+            "name": "length",
+            "in": "query",
+            "description": "Items count",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "Items count",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Additional fields and sub-entities",
+            "required": false,
+            "type": "string"
           }
         ],
         "responses": {
@@ -996,6 +1202,29 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "name": "length",
+            "in": "query",
+            "description": "Items count",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "Items count",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Additional fields and sub-entities",
+            "required": false,
+            "type": "string"
+          }
         ],
         "responses": {
           "200": {
@@ -1020,6 +1249,29 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "name": "length",
+            "in": "query",
+            "description": "Items count",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "Items count",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Additional fields and sub-entities",
+            "required": false,
+            "type": "string"
+          }
         ],
         "responses": {
           "200": {
@@ -1051,6 +1303,13 @@
             "required": true,
             "type": "integer",
             "format": "int64"
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Additional fields and sub-entities",
+            "required": false,
+            "type": "string"
           }
         ],
         "responses": {
@@ -1155,7 +1414,31 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "length",
+            "in": "query",
+            "description": "Items count",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "Items count",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Additional fields and sub-entities",
+            "required": false,
+            "type": "string"
+          }
+        ],
         "responses": {
           "200": {
             "description": "successful operation",
@@ -1699,6 +1982,6 @@
   },
   "externalDocs": {
     "description": "Find out more about authorization flow, API requests and responses",
-    "url": "https://github.com/KardanovIR/evendate_web2/wiki/API"
+    "url": "https://github.com/KardanovIR/evendate-docs/wiki/API"
   }
 }
