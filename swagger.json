@@ -8,7 +8,7 @@
       "email": "api@evendate.ru"
     }
   },
-  "host": "test.evendate.org",
+  "host": "",
   "basePath": "/api/v1",
   "tags": [
     {
@@ -1289,6 +1289,45 @@
         "tags": [
           "User"
         ],
+        "summary": "Returns information about one specified friend",
+        "description": "",
+        "operationId": "getFriend",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "description": "Friends ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Additional fields and sub-entities",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      }
+    },
+    "/users/{Id}/actions": {
+      "get": {
+        "tags": [
+          "User"
+        ],
         "summary": "Returns list of actions for one specified friend",
         "description": "",
         "operationId": "getFriendActions",
@@ -1317,7 +1356,7 @@
             "description": "successful operation",
             "type": "array",
             "items": {
-              "$ref": "#/definitions/User"
+              "$ref": "#/definitions/Action"
             }
           }
         }
@@ -1628,12 +1667,6 @@
         },
         "[link]": {
           "type": "string"
-        },
-        "[actions]": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Action"
-          }
         },
         "[subscriptions]": {
           "type": "array",
@@ -1949,8 +1982,51 @@
     },
     "Action": {
       "type": "object",
-      "properties": {
-
+      "stat_type_id": {
+        "type": "integer",
+        "format": "int64"
+      },
+      "event_id": {
+        "type": "integer",
+        "format": "int64"
+      },
+      "organization_id": {
+        "type": "integer",
+        "format": "int64"
+      },
+      "user_id": {
+        "type": "integer",
+        "format": "int64"
+      },
+      "entity": {
+        "type": "integer",
+        "format": "int64"
+      },
+      "[type_code]": {
+        "type": "string",
+        "enum": ["subscribe", "fave", "unsubscribe", "unfave", "share_vk", "share_fb", "share_tw"]
+      },
+      "[created_at]": {
+        "type": "integer",
+        "format": "int64"
+      },
+      "[user]": {
+        "type": "object",
+        "schema": {
+          "$ref": "#/definitions/User"
+        }
+      },
+      "[event]": {
+        "type": "object",
+        "schema": {
+          "$ref": "#/definitions/Event"
+        }
+      },
+      "[organization]": {
+        "type": "object",
+        "schema": {
+          "$ref": "#/definitions/Organization"
+        }
       }
     },
     "Device": {
