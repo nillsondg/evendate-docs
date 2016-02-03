@@ -238,6 +238,71 @@
         }
       }
     },
+
+    "/organizations/types": {
+      "get": {
+        "tags": [
+          "Organization"
+        ],
+        "summary": "Get list of organization types",
+        "description": "",
+        "operationId": "getOrganizationTypes",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "length",
+            "in": "query",
+            "description": "Items count",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "Items count",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Additional fields and sub-entities",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "Type name pattern",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "Organization type ID",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/OrganizationType"
+              }
+            }
+          }
+        }
+      }
+    },
     "/organizations/{Id}/subscriptions": {
       "delete": {
         "tags": [
@@ -2050,6 +2115,33 @@
           "format": "int64"
         },
         "[expires_on]": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "OrganizationType": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "name": {
+          "type": "string"
+        },
+        "order_position": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "[device_name]": {
+          "type": "string"
+        },
+        "[created_at]": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "[updated_at]": {
           "type": "integer",
           "format": "int64"
         }
