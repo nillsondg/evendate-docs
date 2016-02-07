@@ -164,32 +164,6 @@
       }
     },
     "/organizations/subscriptions": {
-      "post": {
-        "tags": [
-          "Organization"
-        ],
-        "summary": "Add a new subscription to organization",
-        "description": "",
-        "operationId": "addSubscription",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "query",
-            "name": "organization_id",
-            "description": "ID of organization user wants to subscribe",
-            "required": true,
-            "type": "integer",
-            "format": "int64"
-          }
-        ],
-        "responses": {
-          "400": {
-            "description": "BadArgumentException"
-          }
-        }
-      },
       "get": {
         "tags": [
           "Organization"
@@ -304,6 +278,32 @@
       }
     },
     "/organizations/{Id}/subscriptions": {
+      "post": {
+        "tags": [
+          "Organization"
+        ],
+        "summary": "Add a new subscription to organization",
+        "description": "",
+        "operationId": "addSubscription",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Id",
+            "description": "ID of organization user wants to subscribe",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "BadArgumentException"
+          }
+        }
+      },
       "delete": {
         "tags": [
           "Organization"
@@ -338,7 +338,6 @@
         }
       }
     },
-
 
     "/tags/": {
       "get": {
@@ -2134,9 +2133,6 @@
           "type": "integer",
           "format": "int64"
         },
-        "[device_name]": {
-          "type": "string"
-        },
         "[created_at]": {
           "type": "integer",
           "format": "int64"
@@ -2144,6 +2140,12 @@
         "[updated_at]": {
           "type": "integer",
           "format": "int64"
+        },
+        "[organizations]": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Organization"
+          }
         }
       }
     }
