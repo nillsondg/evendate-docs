@@ -490,7 +490,7 @@
             "description": "all future events",
             "required": false,
             "type": "string",
-            "format": "date"
+            "enum":["true", "false"]
           },
           {
             "in": "query",
@@ -1915,6 +1915,15 @@
           "type": "string"
         },
         "[organization_short_name]": {
+          "type": "string"
+        },
+        "[organization_logo_large_url]": {
+          "type": "string"
+        },
+        "[organization_logo_medium_url]": {
+          "type": "string"
+        },
+        "[organization_logo_small_url]": {
           "type": "string"
         },
         "[created_at]": {
