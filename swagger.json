@@ -785,10 +785,12 @@
         "responses": {
           "200": {
             "description": "successful operation",
-            "type": "array",
-            "items": {
-              "$ref": "#/definitions/ApiResponse"
-            }
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ApiResponse"
+              }
+			}
           }
         }
       }
@@ -1293,10 +1295,12 @@
         "responses": {
           "200": {
             "description": "successful operation",
-            "type": "array",
-            "items": {
-              "$ref": "#/definitions/User"
-            }
+            "schema": {
+			  "type": "array",
+			  "items": {
+			    "$ref": "#/definitions/User"
+			  }
+			}
           }
         }
       }
@@ -1340,10 +1344,12 @@
         "responses": {
           "200": {
             "description": "successful operation",
-            "type": "array",
-            "items": {
-              "$ref": "#/definitions/User"
-            }
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/User"
+              }
+			}
           }
         }
       }
@@ -1379,10 +1385,12 @@
         "responses": {
           "200": {
             "description": "successful operation",
-            "type": "array",
-            "items": {
-              "$ref": "#/definitions/User"
-            }
+            "schema": {
+			  "type": "array",
+			  "items": {
+			    "$ref": "#/definitions/User"
+			  }
+			}
           }
         }
       }
@@ -1418,10 +1426,12 @@
         "responses": {
           "200": {
             "description": "successful operation",
-            "type": "array",
-            "items": {
-              "$ref": "#/definitions/Action"
-            }
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Action"
+              }
+			}
           }
         }
       }
@@ -2055,53 +2065,55 @@
     },
     "Action": {
       "type": "object",
-      "stat_type_id": {
-        "type": "integer",
-        "format": "int64"
-      },
-      "event_id": {
-        "type": "integer",
-        "format": "int64"
-      },
-      "organization_id": {
-        "type": "integer",
-        "format": "int64"
-      },
-      "user_id": {
-        "type": "integer",
-        "format": "int64"
-      },
-      "entity": {
-        "type": "integer",
-        "format": "int64"
-      },
-      "[type_code]": {
-        "type": "string",
-        "enum": ["subscribe", "fave", "unsubscribe", "unfave", "share_vk", "share_fb", "share_tw"]
-      },
-      "[created_at]": {
-        "type": "integer",
-        "format": "int64"
-      },
-      "[user]": {
-        "type": "object",
-        "schema": {
-          "$ref": "#/definitions/User"
-        }
-      },
-      "[event]": {
-        "type": "object",
-        "schema": {
-          "$ref": "#/definitions/Event"
-        }
-      },
-      "[organization]": {
-        "type": "object",
-        "schema": {
-          "$ref": "#/definitions/Organization"
-        }
-      }
-    },
+      "properties": {
+		  "stat_type_id": {
+			"type": "integer",
+			"format": "int64"
+		  },
+		  "event_id": {
+			"type": "integer",
+			"format": "int64"
+		  },
+		  "organization_id": {
+			"type": "integer",
+			"format": "int64"
+		  },
+		  "user_id": {
+			"type": "integer",
+			"format": "int64"
+		  },
+		  "entity": {
+			"type": "integer",
+			"format": "int64"
+		  },
+		  "[type_code]": {
+			"type": "string",
+			"enum": ["subscribe", "fave", "unsubscribe", "unfave", "share_vk", "share_fb", "share_tw"]
+		  },
+		  "[created_at]": {
+			"type": "integer",
+			"format": "int64"
+		  },
+		  "[user]": {
+			"type": "object",
+			"schema": {
+			  "$ref": "#/definitions/User"
+			}
+		  },
+		  "[event]": {
+			"type": "object",
+			"schema": {
+			  "$ref": "#/definitions/Event"
+			}
+		  },
+		  "[organization]": {
+			"type": "object",
+			"schema": {
+			  "$ref": "#/definitions/Organization"
+			}
+		  }
+	  }
+	},
     "Device": {
       "type": "object",
       "properties": {
