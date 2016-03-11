@@ -1796,6 +1796,9 @@
         "[notification_type]": {
           "type": "string"
         },
+		"[done]": {
+          "type": "boolean"
+        },
         "[created_at]": {
           "type": "integer",
           "format": "int64"
@@ -1918,6 +1921,24 @@
           "type": "number",
           "format": "float"
         },
+		"[image_vertical_small_url]": {
+          "type": "string"
+        },
+		"[image_horizontal_small_url]": {
+          "type": "string"
+        },
+		"[image_vertical_medium_url]": {
+          "type": "string"
+        },
+		"[image_horizontal_medium_url]": {
+          "type": "string"
+        },
+		"[image_vertical_large_url]": {
+          "type": "string"
+        },
+		"[image_horizontal_large_url]": {
+          "type": "string"
+        },
         "[organization_name]": {
           "type": "string"
         },
@@ -1986,6 +2007,24 @@
         },
         "[can_edit]": {
           "type": "boolean"
+        },
+		"[link]": {
+          "type": "string"
+        },
+		"[public_at]": {
+          "type": "string"
+        },
+		"[registration_required]": {
+          "type": "boolean"
+        },
+		"[registration_till]": {
+          "type": "string"
+        },
+		"[is_free]": {
+          "type": "boolean"
+        },
+		"[min_price]": {
+          "type": "int32"
         }
       }
     },
